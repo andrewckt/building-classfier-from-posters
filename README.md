@@ -1,6 +1,4 @@
-# classify-types-of-korean-movies-dramas
-
-# How To Train an Object Detection Classifier for Multiple Objects Using TensorFlow (GPU) on Windows 10
+# Classify-types-of-korean-movies-dramas
 
 ## Brief Summary
 *Last updated: 6/22/2019 with TensorFlow v1.13.1*
