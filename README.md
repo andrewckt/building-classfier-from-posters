@@ -131,9 +131,12 @@ X.shape
 
 ```
 plt.imshow(X[1001])
+train['Genre'][1001]
 ```
 
-
+<p align="center">
+  <img src="testing/Dadposter.JPG">
+</p>
 
 
 
