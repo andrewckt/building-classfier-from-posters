@@ -1,4 +1,4 @@
-# Building A Classifier from Posters
+# Finding Out Genres of Korean Dramas from a Nulti-Label Image Classifier
 
 The repository provides all the files used to build a multi-label image classification model using keras in jupyter notebook.
 The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). There are a couple of things we can add on to it.
@@ -121,6 +121,10 @@ for i in tqdm(range(train.shape[0])):
     train_image.append(img)
 X = np.array(train_image)
 ```
+The images have been resized to 128 x 128. This is mainly to allow processing to be done faster since running on a local machine GPU, my jupyter notebook also kept giving a dead kernel which suggests running out of memory space.
+
+
+
 
 
 
