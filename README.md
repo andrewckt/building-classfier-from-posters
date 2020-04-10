@@ -57,8 +57,17 @@ Finally, we will use the trained model to get predictions on new images.
 
 
 
-## Steps
+## Buidling our Image Classfier
 ### 1. Install Anaconda, CUDA, and cuDNN
+
+Our aim is to predict the genre of a movie using just its poster image. Can you guess why it is a multi-label image classification problem? Think about it for a moment before you look below.
+
+A movie can belong to more than one genre, right? It doesn’t just have to belong to one category, like action or comedy. The movie can be a combination of two or more genres. Hence, multi-label image classification.
+
+The dataset we’ll be using contains the poster images of several multi-genre movies. I have made some changes in the dataset and converted it into a structured format, i.e. a folder containing the images and a .csv file for true labels. You can download the structured dataset from here. Below are a few posters from our dataset:
+
+
+
 Follow [this YouTube video by Mark Jay](https://www.youtube.com/watch?v=RplXYjxgZbw), which shows the process for installing Anaconda, CUDA, and cuDNN. You do not need to actually install TensorFlow as shown in the video, because we will do that later in Step 2. The video is made for TensorFlow-GPU v1.4, so download and install the CUDA and cuDNN versions for the latest TensorFlow version, rather than CUDA v8.0 and cuDNN v6.0 as instructed in the video. The [TensorFlow website](https://www.tensorflow.org/install/gpu) indicates which versions of CUDA and cuDNN are needed for the latest version of TensorFlow. 
 
 If you are using an older version of TensorFlow, make sure you use the CUDA and cuDNN versions that are compatible with the TensorFlow version you are using. [Here](https://www.tensorflow.org/install/source#tested_build_configurations) is a table showing which version of TensorFlow requires which versions of CUDA and cuDNN.
