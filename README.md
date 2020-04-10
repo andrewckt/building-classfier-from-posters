@@ -16,23 +16,46 @@ We can also see if the model can be used to predict the genres of the latest pop
   <img src="testing/cloy.jpg">
 </p>
 
-The Difference Between Multi-Labels & Multi-Class
-Suppose we are given images of animals to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 categories (cat, dog, rabbit and parrot) in which a given image can be classified. Now, there can be two scenarios:
+## The Difference Between Multi-Labels & Multi-Class
+Suppose we are given images of shapes to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 shapes (circle, rectangle, square and triangle) in which a given image can be classified. Now, there can be two scenarios:
 
-    Each image contains only a single object (either of the above 4 categories) and hence, it can only be classified in one of the 4 categories
-    The image might contain more than one object (from the above 4 categories) and hence the image will belong to more than one category
+  1. Multi-class
+  Each image contains only a single shape (either of the above 4 shapes) and hence, it can only be classified in one of the 4 
+  classes.
+  
+  2. Multi-label
+  The image might contain more than one shape (from the above 4 categories) and hence the image will belong to more than 
+  one shape.
 
-Let’s understand each scenario through examples, starting with the first one:
 
-How to Get Started
+## How to Get Started
 
-ow that we have an intuition about multi-label image classification, let’s dive into the steps you should follow to solve such a problem.
+With this understandning we will now begin to work on our multi-label image classification.
 
-The first step is to get our data in a structured format. This applied to be both binary as well as multi-class image classification.
+### Collect Data
 
-You should have a folder containing all the images on which you want to train your model. Now, for training this model, we also require the true labels of images. So, you should also have a .csv file which contains the names of all the training images and their corresponding true labels.
+We need images of movie and drama posters and have a folder containing all the images for training the model. Along with images, we will require the true labels of images in the form of a .csv file that contains the names of all the training images and their corresponding true labels.
 
-We will learn how to create this .csv file later in this article. For now, just keep in mind that the data should be in a particular format. Once the data is ready, we can divide the further steps as follows:
+
+### Load and pre-process the data
+
+The images will be loaded and pre-processed and split for training and validation.
+ 
+### Determine the model’s architecture
+
+The next step is to define the architecture of the model. This includes deciding the number of hidden layers, number of neurons in each layer, activation function, and so on. We will use a pre-trained model and weights.
+
+ 
+### Train and validate the model
+
+The training images and their corresponding true labels will be used to train the model. We also pass the validation images to help us validate how well the model will perform on unseen data.
+
+ 
+### Make predictions on new images
+
+Finally, we will use the trained model to get predictions on new images.
+
+
 
 ## Steps
 ### 1. Install Anaconda, CUDA, and cuDNN
