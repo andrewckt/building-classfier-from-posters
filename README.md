@@ -5,8 +5,9 @@ The idea came about from looking at other projects such as the one listed [here]
 
 It uses a relatively simple model with about 0.24 validation loss. Pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer tobe about 90%. 
 
-Secondly on a lighter note, after doing this particular project,  I can then have some time to catch up with some movies or even the latest Korean dramas, something I haven't been doing for a while. We can see if themodel can be used to predict the genres of the latest popular dramas at this time of wrting such as Itaewon Class and Crash Landing on You.
+Secondly on a lighter note, after doing this particular project,  I can finally take some time to catch up with the latest movies or even the latest Korean dramas, something I haven't been doing for a while. 
 
+We can also see if the model can be used to predict the genres of the latest popular dramas at this time of wrting such as Itaewon Class and Crash Landing on You.
 
 <p align="center">
   <img src="testing/IC.jpg">
@@ -14,6 +15,24 @@ Secondly on a lighter note, after doing this particular project,  I can then hav
 <p align="center">
   <img src="testing/cloy.jpg">
 </p>
+
+The Difference Between Multi-Labels & Multi-Class
+Suppose we are given images of animals to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 categories (cat, dog, rabbit and parrot) in which a given image can be classified. Now, there can be two scenarios:
+
+    Each image contains only a single object (either of the above 4 categories) and hence, it can only be classified in one of the 4 categories
+    The image might contain more than one object (from the above 4 categories) and hence the image will belong to more than one category
+
+Let’s understand each scenario through examples, starting with the first one:
+
+How to Get Started
+
+ow that we have an intuition about multi-label image classification, let’s dive into the steps you should follow to solve such a problem.
+
+The first step is to get our data in a structured format. This applied to be both binary as well as multi-class image classification.
+
+You should have a folder containing all the images on which you want to train your model. Now, for training this model, we also require the true labels of images. So, you should also have a .csv file which contains the names of all the training images and their corresponding true labels.
+
+We will learn how to create this .csv file later in this article. For now, just keep in mind that the data should be in a particular format. Once the data is ready, we can divide the further steps as follows:
 
 ## Steps
 ### 1. Install Anaconda, CUDA, and cuDNN
