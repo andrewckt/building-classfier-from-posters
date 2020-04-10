@@ -7,14 +7,13 @@ It uses a relatively simple model with about 0.24 validation loss. Pre-trained m
 
 Secondly on a lighter note, after doing this particular project,  I can then have some time to catch up with some movies or even the latest Korean dramas, something I haven't been doing for a while. We can see if themodel can be used to predict the genres of the latest popular dramas at this time of wrting such as Itaewon Class and Crash Landing on You.
 
- 
-
-
 
 <p align="center">
   <img src="testing/IC.jpg">
 </p>
-
+<p align="center">
+  <img src="testing/cloy.jpg">
+</p>
 
 ## Steps
 ### 1. Install Anaconda, CUDA, and cuDNN
