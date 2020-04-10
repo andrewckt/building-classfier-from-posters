@@ -58,18 +58,44 @@ Finally, we will use the trained model to get predictions on new images.
 
 
 ## Buidling our Image Classfier
-### 1. Install Anaconda, CUDA, and cuDNN
 
 Our aim is to predict the genre of a movie using just its poster image. Can you guess why it is a multi-label image classification problem? Think about it for a moment before you look below.
 
 A movie can belong to more than one genre, right? It doesn’t just have to belong to one category, like action or comedy. The movie can be a combination of two or more genres. Hence, multi-label image classification.
 
-The dataset we’ll be using contains the poster images of several multi-genre movies. I have made some changes in the dataset and converted it into a structured format, i.e. a folder containing the images and a .csv file for true labels. You can download the structured dataset from here. Below are a few posters from our dataset:
+The dataset we’ll be using contains the poster images of several multi-genre movies. I have made some changes in the dataset and converted it into a structured format, i.e. a folder containing the images and a .csv file for true labels. You can download the structured dataset from [here](https://drive.google.com/file/d/1iQV5kKF_KGZL9ALx9MMXk_Lg7PklBLCE/view). Below are a few posters from our dataset:
 
 
 <p align="center">
   <img src="testing/postersample.jpg">
 </p>
+
+## The Codes
+First, import all the required Python libraries:
+
+```
+import tensorflow.keras
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Flatten
+from tensorflow.keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.preprocessing import image
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from tqdm import tqdm
+from tensorflow.keras.applications.inception_v3 import InceptionV3
+from tensorflow.keras.applications.vgg19 import VGG19
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
+from tensorflow.keras.layers import Convolution2D, MaxPooling2D, ZeroPadding2D, GlobalAveragePooling2D, AveragePooling2D
+%matplotlib inline
+```
+
+
+
 
 
 
