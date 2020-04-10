@@ -164,7 +164,89 @@ x = Dropout(0.2)(x)
 predictions = Dense(25,kernel_regularizer=l2(0.005), activation='sigmoid')(x)
 model = Model(inputs=vgg19.input, outputs=predictions)
 ```
+Let’s print our model summary:
+```
+model.summary()
+```
+Model: "model_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_2 (InputLayer)         [(None, None, None, 3)]   0         
+_________________________________________________________________
+block1_conv1 (Conv2D)        (None, None, None, 64)    1792      
+_________________________________________________________________
+block1_conv2 (Conv2D)        (None, None, None, 64)    36928     
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, None, None, 64)    0         
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, None, None, 128)   73856     
+_________________________________________________________________
+block2_conv2 (Conv2D)        (None, None, None, 128)   147584    
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, None, None, 128)   0         
+_________________________________________________________________
+block3_conv1 (Conv2D)        (None, None, None, 256)   295168    
+_________________________________________________________________
+block3_conv2 (Conv2D)        (None, None, None, 256)   590080    
+_________________________________________________________________
+block3_conv3 (Conv2D)        (None, None, None, 256)   590080    
+_________________________________________________________________
+block3_conv4 (Conv2D)        (None, None, None, 256)   590080    
+_________________________________________________________________
+block3_pool (MaxPooling2D)   (None, None, None, 256)   0         
+_________________________________________________________________
+block4_conv1 (Conv2D)        (None, None, None, 512)   1180160   
+_________________________________________________________________
+block4_conv2 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block4_conv3 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block4_conv4 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block4_pool (MaxPooling2D)   (None, None, None, 512)   0         
+_________________________________________________________________
+block5_conv1 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block5_conv2 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block5_conv3 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block5_conv4 (Conv2D)        (None, None, None, 512)   2359808   
+_________________________________________________________________
+block5_pool (MaxPooling2D)   (None, None, None, 512)   0         
+_________________________________________________________________
+global_average_pooling2d_1 ( (None, 512)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 128)               65664     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 25)                3225      
+=================================================================
+Total params: 20,093,273
+Trainable params: 20,093,273
+Non-trainable params: 0
+_________________________________________________________________
 
+We will use binary_crossentropy as the loss function and ADAM as the optimizer (again, you can use other optimizers as well):
+```
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test), batch_size=32)
+```
+We will train the model for 20 epochs and also pass the validation data which we created earlier in order to validate the model’s performance:
+Epoch 16/20
+5803/5803 [==============================] - 818s 141ms/sample - loss: 0.2311 - acc: 0.9171 - val_loss: 0.2356 - val_acc: 0.9137
+Epoch 17/20
+5803/5803 [==============================] - 818s 141ms/sample - loss: 0.2290 - acc: 0.9179 - val_loss: 0.2377 - val_acc: 0.9145
+Epoch 18/20
+5803/5803 [==============================] - 817s 141ms/sample - loss: 0.2292 - acc: 0.9170 - val_loss: 0.2365 - val_acc: 0.9136
+Epoch 19/20
+5803/5803 [==============================] - 817s 141ms/sample - loss: 0.2296 - acc: 0.9177 - val_loss: 0.2339 - val_acc: 0.9146
+Epoch 20/20
+5803/5803 [==============================] - 816s 141ms/sample - loss: 0.2273 - acc: 0.9182 - val_loss: 0.2367 - val_acc: 0.9148
+
+We can see that the training loss went below to 0.23 and the validation loss is also in sync.
 
 
 
