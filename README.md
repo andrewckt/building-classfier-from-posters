@@ -121,7 +121,7 @@ for i in tqdm(range(train.shape[0])):
     train_image.append(img)
 X = np.array(train_image)
 ```
-The images have been resized to 128 x 128. This is mainly to allow processing to be done faster since running on a local machine GPU, my jupyter notebook also kept giving a dead kernel which suggests running out of memory space.
+The images have been resized to 128 x 128 x 3. This is mainly to allow processing to be done faster since running on a local machine GPU, my jupyter notebook also kept giving a dead kernel which suggests running out of memory space.
 
 Let's look at the shape of the data we are dealing with:
 ```
@@ -137,6 +137,35 @@ train['Genre'][1001]
 <p align="center">
   <img src="testing/Dadposter.JPG">
 </p>
+
+This movie has 2 genres – Comedy and Drama. The next thing our model would require is the true label(s) for all these images. 
+For each image, we will have 25 targets, i.e. All these 25 targets will have a value of either 0 or 1.
+The Id and genre columns from the train file and convert the remaining columns to an array which will be the target for our images:
+```
+y = np.array(train.drop(['Id', 'Genre'],axis=1))
+y.shape
+```
+(7254, 25)
+
+The shape of the output array is (7254, 25) as we expected. Now, let’s create a validation set which will help us check the performance of our model on unseen data. We will randomly separate 10% of the images as our validation set:
+```
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=100, test_size=0.2)
+```
+## Model Architecture
+The next step is to define the architecture of our model. The output layer will have 25 neurons (equal to the number of genres) and we’ll use sigmoid as the activation function.
+
+I will be using a certain architecture (given below) to solve this problem. You can modify this architecture as well by changing the number of hidden layers, activation functions and other hyperparameters.
+```
+vgg19 = VGG19(weights='imagenet', include_top=False)
+x = vgg19.output
+x = GlobalAveragePooling2D()(x)
+x = Dense(128,activation='relu')(x)
+x = Dropout(0.2)(x)
+predictions = Dense(25,kernel_regularizer=l2(0.005), activation='sigmoid')(x)
+model = Model(inputs=vgg19.input, outputs=predictions)
+```
+
+
 
 
 
