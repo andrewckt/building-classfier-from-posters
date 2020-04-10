@@ -12,7 +12,7 @@ Secondly on a lighter note, after doing this particular project,  I can then hav
 
 
 <p align="center">
-  <img src="doc/detector1.jpg">
+  <img src="testing/IC.jpg">
 </p>
 
 
