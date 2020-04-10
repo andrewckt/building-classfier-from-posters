@@ -94,7 +94,13 @@ from tensorflow.keras.layers import Convolution2D, MaxPooling2D, ZeroPadding2D, 
 %matplotlib inline
 ```
 
+<p align="center">
+  <img src="testing/headcsv.jpg">
+</p>
 
+<p align="center">
+  <img src="testing/columnlabels.jpg">
+</p>
 
 
 
