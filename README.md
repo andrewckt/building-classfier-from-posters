@@ -170,64 +170,65 @@ model.summary()
 ```
 Model: "model_1"
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)			Output Shape              		Param #   
 =================================================================
-input_2 (InputLayer)         [(None, None, None, 3)]   0         
+input_2 (InputLayer)		[(None, None, None, 3)]   	0         
 _________________________________________________________________
-block1_conv1 (Conv2D)        (None, None, None, 64)    1792      
+block1_conv1 (Conv2D)        	(None, None, None, 64)    	1792      
 _________________________________________________________________
-block1_conv2 (Conv2D)        (None, None, None, 64)    36928     
+block1_conv2 (Conv2D)        	(None, None, None, 64)    	36928     
 _________________________________________________________________
-block1_pool (MaxPooling2D)   (None, None, None, 64)    0         
+block1_pool (MaxPooling2D)	(None, None, None, 64)    	0         
 _________________________________________________________________
-block2_conv1 (Conv2D)        (None, None, None, 128)   73856     
+block2_conv1 (Conv2D)        	(None, None, None, 128)   	73856     
 _________________________________________________________________
-block2_conv2 (Conv2D)        (None, None, None, 128)   147584    
+block2_conv2 (Conv2D)        	(None, None, None, 128)   	147584    
 _________________________________________________________________
-block2_pool (MaxPooling2D)   (None, None, None, 128)   0         
+block2_pool (MaxPooling2D)   	(None, None, None, 128)   	0         
 _________________________________________________________________
-block3_conv1 (Conv2D)        (None, None, None, 256)   295168    
+block3_conv1 (Conv2D)        	(None, None, None, 256)   	295168    
 _________________________________________________________________
-block3_conv2 (Conv2D)        (None, None, None, 256)   590080    
+block3_conv2 (Conv2D)        	(None, None, None, 256)   	590080    
 _________________________________________________________________
-block3_conv3 (Conv2D)        (None, None, None, 256)   590080    
+block3_conv3 (Conv2D)        	(None, None, None, 256)   	590080    
 _________________________________________________________________
-block3_conv4 (Conv2D)        (None, None, None, 256)   590080    
+block3_conv4 (Conv2D)        	(None, None, None, 256)   	590080    
 _________________________________________________________________
-block3_pool (MaxPooling2D)   (None, None, None, 256)   0         
+block3_pool (MaxPooling2D)   	(None, None, None, 256)   	0         
 _________________________________________________________________
-block4_conv1 (Conv2D)        (None, None, None, 512)   1180160   
+block4_conv1 (Conv2D)        	(None, None, None, 512)   	1180160   
 _________________________________________________________________
-block4_conv2 (Conv2D)        (None, None, None, 512)   2359808   
+block4_conv2 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block4_conv3 (Conv2D)        (None, None, None, 512)   2359808   
+block4_conv3 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block4_conv4 (Conv2D)        (None, None, None, 512)   2359808   
+block4_conv4 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block4_pool (MaxPooling2D)   (None, None, None, 512)   0         
+block4_pool (MaxPooling2D)   	(None, None, None, 512)   	0         
 _________________________________________________________________
-block5_conv1 (Conv2D)        (None, None, None, 512)   2359808   
+block5_conv1 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block5_conv2 (Conv2D)        (None, None, None, 512)   2359808   
+block5_conv2 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block5_conv3 (Conv2D)        (None, None, None, 512)   2359808   
+block5_conv3 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block5_conv4 (Conv2D)        (None, None, None, 512)   2359808   
+block5_conv4 (Conv2D)        	(None, None, None, 512)   	2359808   
 _________________________________________________________________
-block5_pool (MaxPooling2D)   (None, None, None, 512)   0         
+block5_pool (MaxPooling2D)   	(None, None, None, 512)   	0         
 _________________________________________________________________
-global_average_pooling2d_1 ( (None, 512)               0         
+global_average_pooling2d_1 	(None, 512)               		0         
 _________________________________________________________________
-dense_2 (Dense)              (None, 128)               65664     
+dense_2 (Dense)		(None, 128)               		65664     
 _________________________________________________________________
-dropout_1 (Dropout)          (None, 128)               0         
+dropout_1 (Dropout)		(None, 128)               		0         
 _________________________________________________________________
-dense_3 (Dense)              (None, 25)                3225      
+dense_3 (Dense)		(None, 25)                		3225      
 =================================================================
 Total params: 20,093,273
 Trainable params: 20,093,273
 Non-trainable params: 0
 _________________________________________________________________
+
 
 We will use binary_crossentropy as the loss function and ADAM as the optimizer (again, you can use other optimizers as well):
 ```
