@@ -98,15 +98,30 @@ train = pd.read_csv('data/train.csv')    # reading the csv file
 train.head()      # printing first five rows of the file
 ```
 <p align="center">
-  <img src="testing/headcsv.jpg">
+  <img src="testing/headcsv.JPG">
 </p>
 
 ```
 train.columns
 ```
 <p align="center">
-  <img src="testing/columnlabels.jpg">
+  <img src="testing/columnlabels.JPG">
 </p>
+
+The genre column contains the list for each image which specifies the genre of that movie. So, from the head of the .csv file, the genre of the first image is Comedy and Drama. The remaining 25 columns are the one-hot encoded columns. So, if a movie belongs any of the 25 genrew, its value will be 1, otherwise 0. The image can belong up to 25 different genres.
+
+We will now load and preprocessing the data and read in all the training images:
+
+```
+train_image = []
+for i in tqdm(range(train.shape[0])):
+    img = image.load_img('data/Images/'+train['Id'][i]+'.jpg',target_size=(128,128,3))
+    img = image.img_to_array(img)
+    img = img/255
+    train_image.append(img)
+X = np.array(train_image)
+```
+
 
 
 
