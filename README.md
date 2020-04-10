@@ -1,20 +1,20 @@
 # Building A Classifier from Posters
 
 The repository provides all the files used to build a multi-label image classification model using keras in jupyter notebook.
-The idea came about from looking at other projects such a sthe one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/)
+The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). There are a couple of things we can add on to it.
+
+It uses a relatively simple model with about 0.24 validation loss. Pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer tobe about 90%. 
+
+Secondly on a lighter note, after doing this particular project,  I can then have some time to catch up with some movies or even the latest Korean dramas, something I haven't been doing for a while. We can see if themodel can be used to predict the genres of the latest popular dramas at this time of wrting such as Itaewon Class and Crash Landing on You.
+
+ 
+
+
 
 <p align="center">
   <img src="doc/detector1.jpg">
 </p>
 
-## Introduction
-The purpose of this tutorial is to explain how to train your own convolutional neural network object detection classifier for multiple objects, starting from scratch. At the end of this tutorial, you will have a program that can identify and draw boxes around specific objects in pictures, videos, or in a webcam feed.
-
-There are several good tutorials available for how to use TensorFlow’s Object Detection API to train a classifier for a single object. However, these usually assume you are using a Linux operating system. If you’re like me, you might be a little hesitant to install Linux on your high-powered gaming PC that has the sweet graphics card you’re using to train a classifier. The Object Detection API seems to have been developed on a Linux-based OS. To set up TensorFlow to train a model on Windows, there are several workarounds that need to be used in place of commands that would work fine on Linux. Also, this tutorial provides instructions for training a classifier that can detect multiple objects, not just one.
-
-The tutorial is written for Windows 10, and it will also work for Windows 7 and 8. The general procedure can also be used for Linux operating systems, but file paths and package installation commands will need to change accordingly. I used TensorFlow-GPU v1.5 while writing the initial version of this tutorial, but it will likely work for future versions of TensorFlow.
-
-TensorFlow-GPU allows your PC to use the video card to provide extra processing power while training, so it will be used for this tutorial. In my experience, using TensorFlow-GPU instead of regular TensorFlow reduces training time by a factor of about 8 (3 hours to train instead of 24 hours). The CPU-only version of TensorFlow can also be used for this tutorial, but it will take longer. If you use CPU-only TensorFlow, you do not need to install CUDA and cuDNN in Step 1. 
 
 ## Steps
 ### 1. Install Anaconda, CUDA, and cuDNN
