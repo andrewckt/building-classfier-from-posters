@@ -93,11 +93,17 @@ from tensorflow.keras.layers import Dense, Dropout, Activation, Flatten
 from tensorflow.keras.layers import Convolution2D, MaxPooling2D, ZeroPadding2D, GlobalAveragePooling2D, AveragePooling2D
 %matplotlib inline
 ```
-
+```
+train = pd.read_csv('data/train.csv')    # reading the csv file
+train.head()      # printing first five rows of the file
+```
 <p align="center">
   <img src="testing/headcsv.jpg">
 </p>
 
+```
+train.columns
+```
 <p align="center">
   <img src="testing/columnlabels.jpg">
 </p>
