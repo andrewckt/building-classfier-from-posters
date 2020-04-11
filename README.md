@@ -10,10 +10,7 @@ Secondly on a lighter note, after doing this particular project,  I can finally 
 We can also see if the model can be used to predict the genres of the latest popular dramas at this time of wrting such as Itaewon Class and Crash Landing on You.
 
 <p align="center">
-  <img src="testing/IC.jpg">
-</p>
-<p align="center">
-  <img src="testing/cloy.jpg">
+  <img src="testing/kdrama.jpg">
 </p>
 
 ## The Difference Between Multi-Labels & Multi-Class
@@ -186,7 +183,7 @@ We will train the model for 20 epochs and also pass the validation data which we
 
 We can see that the training loss went below to 0.23 and the validation loss is also in sync.
 
-
+## Making Predictions
 
 
 
