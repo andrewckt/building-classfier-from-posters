@@ -2,7 +2,7 @@
 
 The repository provides all the files used to build a multi-label image classification model using movie posters with keras in jupyter notebook to classify their genres. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). Seems like something fun to do given the circuit breaker implemented for everybody to stay home. Good to gatch up on some Netflix movies and dramas. 
 
-The apporach using Keras applications are simpler to approach and explain to make for better understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer to be about 90%. 
+The apporach using Keras applications are simpler to approach and explain to make for better understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer to be about 90%. The choice of model I use will be VGG19.
 
 Secondly on a lighter note, after doing this particular project,  I can also take some time to catch up with the latest movies or even the latest Korean dramas, not knowing their specific genres. We can also see if the model can be used to predict the genres of the latest popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You look to be the hot ones.
 
