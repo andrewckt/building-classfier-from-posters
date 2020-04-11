@@ -1,19 +1,18 @@
 # Multi-Label Image Classifier for Netflix Movies & Korean Dramas 
 
-The repository provides all the files used to build a multi-label image classification model using movie posters with keras in jupyter notebook. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). There are a couple of things we can add on to it.
+The repository provides all the files used to build a multi-label image classification model using movie posters with keras in jupyter notebook to classify their genres. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). Seems like something fun to do given the circuit breaker implemented for everybody to stay home. Good to gatch up on some Netflix movies and dramas. 
 
-It uses a relatively simple model with about 0.24 validation loss. Pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer tobe about 90%. 
+The apporach using Keras applications are simpler to approach and explain to make for better understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer to be about 90%. 
 
-Secondly on a lighter note, after doing this particular project,  I can finally take some time to catch up with the latest movies or even the latest Korean dramas, something I haven't been doing for a while. 
-
-We can also see if the model can be used to predict the genres of the latest popular dramas at this time of wrting such as Itaewon Class and Crash Landing on You.
+Secondly on a lighter note, after doing this particular project,  I can also take some time to catch up with the latest movies or even the latest Korean dramas, not knowing their specific genres. We can also see if the model can be used to predict the genres of the latest popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You look to be the hot ones.
 
 <p align="center">
   <img src="testing/kdrama.jpg">
 </p>
 
 ## The Difference Between Multi-Labels & Multi-Class
-Suppose we are given images of shapes to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 shapes (circle, rectangle, square and triangle) in which a given image can be classified. Now, there can be two scenarios:
+Since a movie can have more than 1 genre, we are looking at multi-label classification as opposed to multi-classification.
+To provide the differentiation between the 2, suppose we are given images of shapes to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 shapes (circle, rectangle, square and triangle) in which a given image can be classified. Now, there can be two scenarios:
 
   1. Multi-class
   Each image contains only a single shape (either of the above 4 shapes) and hence, it can only be classified in one of the 4 
@@ -40,26 +39,22 @@ The images will be loaded and pre-processed and split for training and validatio
 ### Determine the model’s architecture
 
 The next step is to define the architecture of the model. This includes deciding the number of hidden layers, number of neurons in each layer, activation function, and so on. We will use a pre-trained model and weights.
-
  
 ### Train and validate the model
 
 The training images and their corresponding true labels will be used to train the model. We also pass the validation images to help us validate how well the model will perform on unseen data.
-
  
 ### Make predictions on new images
 
 Finally, we will use the trained model to get predictions on new images.
 
-
 ## Buidling our Image Classfier
 
-Our aim is to predict the genre of a movie using just its poster image. Can you guess why it is a multi-label image classification problem? Think about it for a moment before you look below.
+Our aim is to predict the genre of a movie using just its poster image. A movie can belong to more than one genre and it doesn’t just have to belong to one category, like action or comedy. The movie can be a combination of two or more genres. Hence, multi-label image classification.
 
-A movie can belong to more than one genre, right? It doesn’t just have to belong to one category, like action or comedy. The movie can be a combination of two or more genres. Hence, multi-label image classification.
+The dataset we’ll be using contains the poster images of several multi-genre movies. I have made some changes in the dataset and converted it into a structured format, i.e. a folder containing the images and a .csv file for true labels. You can download the structured dataset from [here](https://drive.google.com/file/d/1iQV5kKF_KGZL9ALx9MMXk_Lg7PklBLCE/view). 
 
-The dataset we’ll be using contains the poster images of several multi-genre movies. I have made some changes in the dataset and converted it into a structured format, i.e. a folder containing the images and a .csv file for true labels. You can download the structured dataset from [here](https://drive.google.com/file/d/1iQV5kKF_KGZL9ALx9MMXk_Lg7PklBLCE/view). Below are a few posters from our dataset:
-
+Below are a few posters from our dataset:
 
 <p align="center">
   <img src="testing/postersample.jpg">
