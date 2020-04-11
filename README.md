@@ -204,23 +204,28 @@ for i in range(3):
     print("{}".format(classes[top_3[i]])+" ({:.3})".format(proba[0][top_3[i]]))
 plt.imshow(img)
 ```
-
+#### The Godfather 2
 <p align="center">
   <img src="testing/result1.JPG">
 </p>
+One of the classic movies of all time - The Godfather 2. Results are not too bad - Drama, Crime and Thriller.
 
+#### Inception
 <p align="center">
   <img src="testing/result2.JPG">
 </p>
 
+#### Parasite
 <p align="center">
   <img src="testing/result3.JPG">
 </p>
 
+#### Korean Drama - Crash Landing On you
 <p align="center">
   <img src="testing/result4.JPG">
 </p>
 
+#### Lorean Drama - Itaewon Class
 <p align="center">
   <img src="testing/result5.JPG">
 </p>
