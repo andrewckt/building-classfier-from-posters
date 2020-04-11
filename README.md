@@ -214,19 +214,37 @@ One of the classic movies of all time - The Godfather 2. Results are not too bad
 <p align="center">
   <img src="testing/result2.JPG">
 </p>
+Pretty accurate for the movie as well.
 
 #### Parasite
 <p align="center">
   <img src="testing/result3.JPG">
 </p>
+Havenot watch this yet but wiki describes this as a dark comedy. Isuppose it is not too far off.
+
+Le's try it out for Korean dramas. Haven't watch them yet so let's see how our model does.
 
 #### Korean Drama - Crash Landing On you
 <p align="center">
   <img src="testing/result4.JPG">
 </p>
+Wiki describes it as drama romance. Relatively accurate assessment. Not too sure about the comedy part though.
 
-#### Lorean Drama - Itaewon Class
+#### Korean Drama - Itaewon Class
 <p align="center">
   <img src="testing/result5.JPG">
 </p>
+
+Again pretty much accurate on it being a drama with some crime involved.
+
+We can see that the model is able to predict the genres evenf or Korean dramas just by seeing their poster.
+
+## Next Steps
+Our VGG19 model performed quite well even though we only had around 7000 images for training it.
+
+We can try and collect more updated posters as well as posters from other countries' movies such as Indian and Korean movies and dramas for training. The genre categories can have comparatively equal distribution to reduce overfitting. I would also relook and update some of the genres. For example in our Parasite example which is a dark comedy, perhaps not too suitable to be labelled in the comedy category.
+ 
+## Conclusion
+Using pre-trained weights and models for our VGG19 model, we managed to achieve slightly more accurate results. We could also extend the model to predict genres using posters of popular Korean dramas.
+
 
