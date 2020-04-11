@@ -194,7 +194,7 @@ Validation accuracy: 0.91283244
 Now, we will pre-process and predict the genre for these posters using our trained model. The model will tell us the probability for each genre and we will take the top 3 predictions from that.
 
 ```
-img = image.load_img('data/testing/roskywalker.jpg',target_size=(128,128,3))
+img = image.load_img('data/testing/inception.jpg',target_size=(128,128,3))
 img = image.img_to_array(img)
 img = img/255
 classes = np.array(train.columns[2:])
@@ -204,8 +204,24 @@ for i in range(3):
     print("{}".format(classes[top_3[i]])+" ({:.3})".format(proba[0][top_3[i]]))
 plt.imshow(img)
 ```
-```
+
 <p align="center">
-  <img src="testing/.JPG">
+  <img src="testing/result1.JPG">
+</p>
+
+<p align="center">
+  <img src="testing/result2.JPG">
+</p>
+
+<p align="center">
+  <img src="testing/result3.JPG">
+</p>
+
+<p align="center">
+  <img src="testing/result4.JPG">
+</p>
+
+<p align="center">
+  <img src="testing/result5.JPG">
 </p>
 
