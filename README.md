@@ -222,17 +222,18 @@ Haven't watch this yet but wiki describes this as a dark comedy. I suppose the p
 
 Let's try it out for Korean dramas. Let's see how our model does.
 
+Wiki describes Crash Landing On You as a drama cum romance. Relatively accurate assessment I would think.
 <p align="left">
   <img src="testing/result4.JPG">
 </p>
-Wiki describes Crash Landing On You as a drama cum romance. Relatively accurate assessment.
+
  
- 
+Korean Drama - Itaewon Class. Again pretty much accurate on it being a drama with some crime involved.
+
 <p align="left">
   <img src="testing/result5.JPG">
 </p>
-Korean Drama - Itaewon Class. Again pretty much accurate on it being a drama with some crime involved.
-Afternote: I actually watch this over the last 3 days - Definitley a drama. Some crimes inovolved. Not too sure abou the comedy part though.
+Afternote: I actually watch this over the last 3 days - Definitley a drama. Some crimes inovolved.
 
 
 We can see that the model is able to predict the genres evenf or Korean dramas just by seeing their poster.
