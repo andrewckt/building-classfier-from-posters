@@ -138,14 +138,14 @@ y.shape
 ```
 (7254, 25)
 
-The shape of the output array is (7254, 25) as we expected. Now, let’s create a validation set which will help us check the performance of our model on unseen data. We will randomly separate 10% of the images as our validation set:
+The shape of the output array is (7254, 25) as we expected. We create a validation set which will help us check the performance of our model on unseen data. We will randomly separate 20% of the images as our validation set:
 ```
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=100, test_size=0.2)
 ```
 ## Model Architecture
-The next step is to define the architecture of our model. The output layer will have 25 neurons (equal to the number of genres) and we’ll use sigmoid as the activation function.
+The next step is to define the architecture of our model. The output layer will have 25 neurons (equal to the number of genres) and We will use sigmoid as the activation function.
 
-I will be using a certain architecture (given below) to solve this problem. You can modify this architecture as well by changing the number of hidden layers, activation functions and other hyperparameters.
+I will be using the vgg19 model and adding it on to solve this problem by changing the number of hidden layers, activation functions and other hyperparameters.
 ```
 vgg19 = VGG19(weights='imagenet', include_top=False)
 x = vgg19.output
@@ -155,7 +155,7 @@ x = Dropout(0.2)(x)
 predictions = Dense(25,kernel_regularizer=l2(0.005), activation='sigmoid')(x)
 model = Model(inputs=vgg19.input, outputs=predictions)
 ```
-Let’s print our model summary:
+Take a look at our model summary:
 ```
 model.summary()
 ```
@@ -164,7 +164,7 @@ model.summary()
 </p>
 
 
-We will use binary_crossentropy as the loss function and ADAM as the optimizer (again, you can use other optimizers as well):
+We will use binary_crossentropy as the loss function and ADAM as the optimizer:
 ```
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test), batch_size=32)
@@ -175,7 +175,7 @@ We will train the model for 20 epochs and also pass the validation data which we
   <img src="testing/trainmodel.JPG">
 </p>
 
-We can see that the training loss went below to 0.23 and the validation loss is also in sync. Validation accuracy was up to 91%.
+We can see that the training loss went below to 0.23 and the validation loss is also not too far off. Validation accuracy was slightly over 91%. (Trainng up to 200 epochs did not improve the results much) 
 
 ```
 val_eval = model.evaluate(X_test, y_test, verbose = 1)
@@ -187,7 +187,7 @@ Validation accuracy: 0.91283244
 
 ## Making Predictions
 
-Now, we will pre-process and predict the genre for these posters using our trained model. The model will tell us the probability for each genre and we will take the top 3 predictions from that.
+Now that we have trained our model, we can now pre-process and predict the genre for these posters using our trained model. The model will tell us the probability for each genre and we will take the top 3 predicted genres from that.
 
 ```
 img = image.load_img('data/testing/inception.jpg',target_size=(128,128,3))
@@ -201,19 +201,19 @@ for i in range(3):
 plt.imshow(img)
 ```
 #### The Godfather 2
-<p align="center">
+<p align="left">
   <img src="testing/result1.JPG">
 </p>
 One of the classic movies of all time - The Godfather 2. Results are not too bad - Drama, Crime and Thriller.
 
 #### Inception
-<p align="center">
+<p align="left">
   <img src="testing/result2.JPG">
 </p>
 Pretty accurate for the movie as well.
 
 #### Parasite
-<p align="center">
+<p align="left">
   <img src="testing/result3.JPG">
 </p>
 Havenot watch this yet but wiki describes this as a dark comedy. Isuppose it is not too far off.
@@ -221,17 +221,20 @@ Havenot watch this yet but wiki describes this as a dark comedy. Isuppose it is 
 Le's try it out for Korean dramas. Haven't watch them yet so let's see how our model does.
 
 #### Korean Drama - Crash Landing On you
-<p align="center">
+<p align="left">
   <img src="testing/result4.JPG">
 </p>
 Wiki describes it as drama romance. Relatively accurate assessment. Not too sure about the comedy part though.
 
 #### Korean Drama - Itaewon Class
-<p align="center">
+<p align="left">
   <img src="testing/result5.JPG">
 </p>
 
 Again pretty much accurate on it being a drama with some crime involved.
+
+Afternote: I actually watch this over the last 3 days - Definitley a drama. Some crimes inovolved. Not sure abou the comedy part though.
+
 
 We can see that the model is able to predict the genres evenf or Korean dramas just by seeing their poster.
 
