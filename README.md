@@ -1,18 +1,19 @@
 # Multi-Label Image Classifier for Netflix Movies & Korean Dramas 
 
-The repository provides all the files used to build a multi-label image classification model using movie posters with keras in jupyter notebook to classify their genres. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). Seems like something fun to do given the circuit breaker implemented for everybody to stay home. Good to gatch up on some Netflix movies and dramas. 
+The repository provides all the files used to build a multi-label image classification model using movie posters images with keras in jupyter notebook to classify their genres. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). Seems like something fun to do given the circuit breaker implemented for everybody to stay home. Good time to gatch up on some Netflix movies and dramas. 
 
-The apporach using Keras applications are simpler to approach and explain to make for better understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to tey to better that and improve the classfication accuracy which we infer to be about 90%. The choice of model I use will be VGG19.
+Using Keras, it would be simpler to approach and explain to make for ease of understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to improve the classfication accuracy to be above 90%. The chosen model will be VGG19.
 
-Secondly on a lighter note, after doing this particular project,  I can also take some time to catch up with the latest movies or even the latest Korean dramas, not knowing their specific genres. We can also see if the model can be used to predict the genres of the latest popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You look to be the hot ones.
+Secondly on a lighter note, movies and dramas are  great way to unwind and relax staying ay home. I have not been in touch with the latest the latest movies or even the latest Korean dramas. Perhaps this project can allow me to predict their specific genres. We can see if the model can be used to predict the genres of the latest movies or even extend them to popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You seem like good ones to catch.
 
 <p align="center">
   <img src="testing/kdrama.jpg">
 </p>
 
 ## The Difference Between Multi-Labels & Multi-Class
-Since a movie can have more than 1 genre, we are looking at multi-label classification as opposed to multi-classification.
-To provide the differentiation between the 2, suppose we are given images of shapes to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 shapes (circle, rectangle, square and triangle) in which a given image can be classified. Now, there can be two scenarios:
+This project also allows us to be more clear how to set up our data. Since a movie can have more than 1 genre, we would be looking at multi-label classification as opposed to multi-classification.
+
+To differentiate between both, suppose we are given images of shapes to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 shapes (circle, rectangle, square and triangle) in which a given image can be classified. Now, there can be two scenarios:
 
   1. Multi-class
   Each image contains only a single shape (either of the above 4 shapes) and hence, it can only be classified in one of the 4 
@@ -25,7 +26,7 @@ To provide the differentiation between the 2, suppose we are given images of sha
 
 ## How to Get Started
 
-With this understandning we will now begin to work on our multi-label image classification.
+With this understanding, the steps to begin the work on the movie multi-label image classification will be as follow:
 
 ### Gather Images
 
