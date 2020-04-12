@@ -222,18 +222,18 @@ Haven't watch this yet but wiki describes this as a dark comedy. I suppose the p
 
 Let's try it out for Korean dramas. Let's see how our model does.
 
-Wiki describes Crash Landing On You as a drama cum romance. Relatively accurate assessment I would think.
+Wiki describes Crash Landing On You as a drama cum romance. Relatively accurate assessment I would think. The genre with highest probabililty right on the mark as a drama. It also picks out romance.
 <p align="left">
   <img src="testing/result4.JPG">
 </p>
 
  
-Korean Drama - Itaewon Class. Again pretty much accurate on it being a drama with some crime involved.
+Korean Drama - Itaewon Class. Again pretty much accurate on it being a drama.
 
 <p align="left">
   <img src="testing/result5.JPG">
 </p>
-Afternote: I actually watch this over the last 3 days - Definitley a drama. Some crimes inovolved.
+Afternote: I actually watch this over the last 3 days - Its actually a story about revenge. 
 
 
 We can see that the model is able to predict the genres evenf or Korean dramas just by seeing their poster.
@@ -241,7 +241,7 @@ We can see that the model is able to predict the genres evenf or Korean dramas j
 ## Next Steps
 Our VGG19 model performed quite well even though we only had around 7000 images for training it.
 
-We can try and collect more updated posters as well as posters from other countries' movies such as Indian and Korean movies and dramas for training. The genre categories can have comparatively equal distribution to reduce overfitting. I would also relook and update some of the genres. In our Parasite example which is a dark comedy, perhaps not too suitable to be labelled in the comedy category.
+We can try and collect more updated posters as well as posters from other countries' movies such as Indian and Korean movies and dramas for training. The genre categories can have comparatively equal distribution to reduce overfitting. I would also relook and update and sub categorise some of the genres such as Comedy which may be too broad. We see it appear many times in our results. In our Parasite example which is a dark comedy, perhaps not too suitable to be labelled in the same category as funnier comedies.
  
 ## Conclusion
 Using pre-trained weights and models for our VGG19 model, we managed to achieve slightly more accurate results. We could also extend the model to predict genres using posters of popular Korean dramas and movies.
