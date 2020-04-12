@@ -200,7 +200,7 @@ for i in range(3):
     print("{}".format(classes[top_3[i]])+" ({:.3})".format(proba[0][top_3[i]]))
 plt.imshow(img)
 ```
-## Results
+## Predictions
 
 
 One of the classic movies of all time - The Godfather 2. Results are not too bad - Drama, Crime and Thriller.
