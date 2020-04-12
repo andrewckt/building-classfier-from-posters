@@ -202,22 +202,22 @@ plt.imshow(img)
 ```
 ## Results
 
+
+One of the classic movies of all time - The Godfather 2. Results are not too bad - Drama, Crime and Thriller.
 <p align="left">
   <img src="testing/result1.JPG">
 </p>
-One of the classic movies of all time - The Godfather 2. Results are not too bad - Drama, Crime and Thriller.
 
-
+Next another great movie Inception. Pretty accurate I would think as well.
 <p align="left">
   <img src="testing/result2.JPG">
 </p>
-Next another great movie Inception. Pretty accurate I would think as well.
 
-
+Haven't watch this yet but wiki describes this as a dark comedy. I suppose the predicted genres are not too far off.
 <p align="left">
   <img src="testing/result3.JPG">
 </p>
-Haven't watch this yet but wiki describes this as a dark comedy. I suppose the predicted genres are not too far off.
+
 
 
 Let's try it out for Korean dramas. Let's see how our model does.
