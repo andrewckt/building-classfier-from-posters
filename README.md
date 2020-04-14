@@ -167,7 +167,7 @@ model.summary()
 We will use binary_crossentropy as the loss function and ADAM as the optimizer:
 ```
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test), batch_size=32)
+model.fit(X_train, y_train, epochs=20, validation_data=(X_test, y_test), batch_size=32)
 ```
 We will train the model for 20 epochs and also pass the validation data which we created earlier in order to validate the model’s performance:
 
@@ -177,13 +177,6 @@ We will train the model for 20 epochs and also pass the validation data which we
 
 We can see that the training loss went below to 0.23 and the validation loss is also not too far off. Validation accuracy was slightly over 91%. (Trainng up to 200 epochs did not improve the results much) 
 
-```
-val_eval = model.evaluate(X_test, y_test, verbose = 1)
-print('Validation loss:', val_eval[0])
-print('Validation accuracy:', val_eval[1])
-```
-Validation loss: 0.25739657137412025
-Validation accuracy: 0.91283244
 
 ## Making Predictions
 
