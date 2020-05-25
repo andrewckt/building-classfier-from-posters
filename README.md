@@ -229,7 +229,7 @@ Korean Drama - Itaewon Class. Again pretty much accurate on it being a drama.
 Afternote: I actually watch this over the last 3 days - Its actually a story about revenge. 
 
 
-We can see that the model is able to predict the genres evenf or Korean dramas just by seeing their poster.
+We can see that the model is able to predict the genres event or Korean dramas just by seeing their poster.
 
 ## Next Steps
 Our VGG19 model performed quite well even though we only had around 7000 images for training it.
