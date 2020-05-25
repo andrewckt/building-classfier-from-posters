@@ -4,7 +4,7 @@ The repository provides all the files used to build a multi-label image classifi
 
 Using Keras, it would be simpler to approach and explain to make for ease of understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to improve the classfication accuracy to be above 90%. The chosen model will be VGG19.
 
-Secondly on a lighter note, movies and dramas are  great way to unwind and relax staying ay home. I have not been in touch with the latest movies or even the latest Korean dramas. Perhaps this project can allow me to predict their specific genres. We can see if the model can be used to predict the genres of the latest movies or even extend them to popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You seem like good ones to catch.
+Secondly on a lighter note, movies and dramas are  great way to unwind and relax staying ay home. I have not been in touch with the latest movies or even the latest Korean dramas. Perhaps this project can allow me to predict their specific genres. We can see if the model can be used to predict the genres of the latest movies or even extend them to popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You seem like good ones to catch at this time.
 
 <p align="center">
   <img src="testing/kdrama.jpg">
