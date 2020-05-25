@@ -15,11 +15,11 @@ This project also allows us to be more clear how to set up our data. Since a mov
 
 To differentiate between both, suppose we are given images of shapes to be classified into their corresponding categories. For ease of understanding, let’s assume there are a total of 4 shapes (circle, rectangle, square and triangle) in which a given image can be classified. Now, there can be two scenarios:
 
-  1. Multi-class
+  1. Multi-class - 
   Each image contains only a single shape (either of the above 4 shapes) and hence, it can only be classified in one of the 4 
   classes.
   
-  2. Multi-label
+  2. Multi-label - 
   The image might contain more than one shape (from the above 4 categories) and hence the image will belong to more than 
   one shape.
 
