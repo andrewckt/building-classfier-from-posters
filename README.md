@@ -1,10 +1,10 @@
 # Multi-Label Image Classifier for Netflix Movies & Korean Dramas 
 
-The repository provides all the files used to build a multi-label image classification model using movie posters images with keras in jupyter notebook to classify their genres. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). Seems like something fun to do given the circuit breaker implemented for everybody to stay home. Good time to gatch up on some Netflix movies and dramas. 
+The repository provides all the files used to build a multi-label image classification model using movie posters images with keras in jupyter notebook to classify their genres. The idea came about from looking at other projects such as the one listed [here](https://www.analyticsvidhya.com/blog/2019/04/build-first-multi-label-image-classification-model-python/). Seems like something fun to do given the Covid-19 circuit breaker implemented for everybody to stay home. Good time to gatch up on some Netflix movies and dramas. 
 
 Using Keras, it would be simpler to approach and explain to make for ease of understanding. There are a couple of things we can add on to it. The previous work uses a relatively simple model with about 0.24 validation loss. Perhaps pre-trained models can be used instead to improve the classfication accuracy to be above 90%. The chosen model will be VGG19.
 
-Secondly on a lighter note, movies and dramas are  great way to unwind and relax staying ay home. I have not been in touch with the latest the latest movies or even the latest Korean dramas. Perhaps this project can allow me to predict their specific genres. We can see if the model can be used to predict the genres of the latest movies or even extend them to popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You seem like good ones to catch.
+Secondly on a lighter note, movies and dramas are  great way to unwind and relax staying ay home. I have not been in touch with the latest movies or even the latest Korean dramas. Perhaps this project can allow me to predict their specific genres. We can see if the model can be used to predict the genres of the latest movies or even extend them to popular dramas. At this time of writing, korean dramas such as Itaewon Class and Crash Landing on You seem like good ones to catch.
 
 <p align="center">
   <img src="testing/kdrama.jpg">
